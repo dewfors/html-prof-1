@@ -341,11 +341,6 @@ img {
 }
 
 .form {
-  width: 568px;
-  min-height: 395px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
   background-color: var(--basic-white);
 }
 
@@ -997,7 +992,38 @@ img {
 
 /* modal-find */
 .modal-find {
+  width: 568px;
+  min-height: 395px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  overflow: hidden;
   text-align: center;
+}
+
+.form-hide {
+  display: none;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  display: block;
+  animation-name: fadeInDown;
 }
 
 .button-find-hotel {
