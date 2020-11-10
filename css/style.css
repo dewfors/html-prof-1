@@ -4,12 +4,16 @@
   --basic-black-opacity: rgba(0, 0, 0, 0.3);
   --basic-gray-dark: #333333;
   --basic-gray: #666666;
+  --basic-gray-opacity: rgba(136, 136, 136, 0.1);
   --basic-gray-light: #cccccc;
   --basic-gray-lighter: #cacaca;
+  --basic-gray-pale: #eeeeee;
 
   --basic-white: #ffffff;
   --basic-white-light: #f2f2f2;
   --basic-white-opacity: rgba(255, 255, 255, 0.3);
+
+  --special-error: #ff0000;
 
   --special-blue: #81b3d2;
   --special-blue-opacity: rgba(129, 179, 210, 0.3);
@@ -37,7 +41,7 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
@@ -86,17 +90,20 @@ img {
 }
 
 .page-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  height: 100%;
+  background-color: var(--basic-gray-opacity);
 }
 
 .main-wrapper {
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
   padding: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--basic-white);
 }
 
 /* main-navigation */
@@ -242,7 +249,7 @@ img {
 }
 
 .features-item-clear {
-  background-color: var(--basic-white);
+  background-color: var(--basic-gray-pale);
 }
 
 .features-item-clear h3 {
@@ -262,7 +269,7 @@ img {
 }
 
 .features-advice-item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 75px;
   height: 72px;
@@ -306,6 +313,10 @@ img {
 .map {
   padding-top: 55px;
   text-align: center;
+}
+
+.map-view iframe {
+  display: block;
 }
 
 .appointment-title {
@@ -614,6 +625,10 @@ img {
   padding-left: 4px;
 }
 
+.price-controls input::placeholder {
+  color: var(--basic-white);
+}
+
 .range-controls {
   position: relative;
   height: 20px;
@@ -784,6 +799,7 @@ img {
 
 .house span {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .house .house-type {
@@ -837,6 +853,7 @@ img {
 
 .star {
   display: inline-block;
+  vertical-align: top;
   background-image: url(../img/star.svg);
   background-repeat: no-repeat;
   width: 19px;
@@ -908,6 +925,7 @@ img {
 
 .footer-phone-text a {
   display: inline-block;
+  vertical-align: middle;
   margin-top: 10px;
   color: var(--basic-black);
 }
@@ -1005,9 +1023,25 @@ img {
   display: none;
 }
 
+.form-input-empty {
+  border: 2px solid var(--special-error);
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: scale;
+}
+
 .animate {
   animation-duration: 1s;
   animation-fill-mode: both;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 }
 
 @keyframes fadeInDown {
@@ -1037,4 +1071,9 @@ img {
 .button-find-hotel:focus {
   background-color: var(--special-blue-focus);
   color: var(--basic-white-opacity);
+}
+
+.section-empty {
+  padding-top: 200px;
+  text-align: center;
 }
