@@ -20,7 +20,7 @@
           <li class="link link-left"><a href="blank.html">Информация</a></li>
           <li class="link link-left"><a href="blank.html">Фото и видео</a></li>
           <li class="link link-right link-gap"><a href="blank.html">Карта штата</a></li>
-          <li class="link link-right"><a href="hotels.html">Гостиницы</a></li>
+          <li class="link link-right link-active"><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </div>
     </nav>
@@ -31,7 +31,7 @@
       <h2 class="visually-hidden">Форма для поиска гостиницы в Седоне</h2>
       <!--Здесь будет форма поиска-->
       <div class="search-filter">
-        <form class="form-settings" action="https://echo.htmlacademy.ru/courses" method="GET">
+        <form class="form-settings" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset class="infrastructure">
             <legend>Инфраструктура:</legend>
             <ul>
@@ -72,10 +72,10 @@
               <div class="range-wrapper">
                 <div class="price-controls">
                   <label class="min-price">
-                    от <input type="number" name="min-price" value="0">
+                    от <input type="number" name="min-price" placeholder="0" required>
                   </label>
                   <label class="max-price">
-                    до <input type="number" name="max-price" value="3000">
+                    до <input type="number" name="max-price" placeholder="3000" required>
                   </label>
                 </div>
                 <div class="range-controls">
@@ -87,7 +87,7 @@
                 </div>
               </div>
               <div class="filter-btn">
-                <button class="button filter-button" type="button">Показать</button>
+                <button class="button filter-button" type="submit" aria-label="Показать результаты поиска гостиниц">Показать</button>
               </div>
             </fieldset>
           </div>
@@ -135,8 +135,8 @@
               <p class="house"><span class="house-type">Гостиница</span> <span class="price">от 4000 Р.</span></p>
               <div class="result-content-buttons">
                 <div>
-                  <a class="button button-result button-result-details" href="#">Подробнее</a>
-                  <a class="button button-result button-result-reservation" href="#">Забронировать</a>
+                  <a class="button button-result button-result-details" href="#" aria-label="Подробнее о Гостиница Amara Resort & Spa">Подробнее</a>
+                  <a class="button button-result button-result-reservation" href="#" aria-label="Забронировать Гостиница Amara Resort & Spa">Забронировать</a>
                 </div>
                 <span class="rating">Рейтинг: 8.5</span>
               </div>
@@ -159,8 +159,8 @@
               <p class="house"><span class="house-type">Мотель</span> <span class="price">от 3000 Р.</span></p>
               <div class="result-content-buttons">
                 <div>
-                  <a class="button button-result button-result-details" href="#">Подробнее</a>
-                  <a class="button button-result button-result-reservation" href="#">Забронировать</a>
+                  <a class="button button-result button-result-details" href="#" aria-label="Подробнее о Мотель Desert Quail Inn">Подробнее</a>
+                  <a class="button button-result button-result-reservation" href="#" aria-label="Забронировать Мотель Desert Quail Inn">Забронировать</a>
                 </div>
                 <span class="rating">Рейтинг: 8.9</span>
               </div>
@@ -182,8 +182,8 @@
               <p class="house"><span class="house-type">Апартаменты</span> <span class="price">от 2000 Р.</span></p>
               <div class="result-content-buttons">
                 <div>
-                  <a class="button button-result button-result-details" href="#">Подробнее</a>
-                  <a class="button button-result button-result-reservation" href="#">Забронировать</a>
+                  <a class="button button-result button-result-details" href="#" aria-label="Подробнее о Апартаменты Villas at Poco Diablo">Подробнее</a>
+                  <a class="button button-result button-result-reservation" href="#" aria-label="Забронировать Апартаменты Villas at Poco Diablo">Забронировать</a>
                 </div>
                 <span class="rating">Рейтинг: 9.2</span>
               </div>
