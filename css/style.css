@@ -5,6 +5,7 @@
   --basic-gray-dark: #333333;
   --basic-gray: #666666;
   --basic-gray-light: #cccccc;
+  --basic-gray-lighter: #cacaca;
 
   --basic-white: #ffffff;
   --basic-white-light: #f2f2f2;
@@ -21,7 +22,6 @@
 }
 
 /* Global */
-
 html {
   box-sizing: border-box;
 }
@@ -113,12 +113,13 @@ img {
 }
 
 .main-navigation-wrapper {
+  padding: 0 73px;
   background-color: inherit;
 }
 
 .site-navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 227px 227px 1fr 227px 227px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -128,7 +129,14 @@ img {
   min-height: 56px;
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.link-left {
+  justify-content: flex-start;
+}
+
+.link-right {
+  justify-content: flex-end;
 }
 
 .site-navigation .link-gap {
@@ -159,7 +167,7 @@ img {
   url("../img/background-welcome.jpg");
   background-repeat: no-repeat;
   background-position: center bottom, center top;
-  min-height: 510px;
+  min-height: 509px;
   position: relative;
 }
 
@@ -172,7 +180,7 @@ img {
 
 .welcome h1 {
   margin-top: 43px;
-  margin-bottom: 26px;
+  margin-bottom: 42px;
   font-size: 21px;
   font-weight: 700;
 }
@@ -207,6 +215,7 @@ img {
 
 .features-item h3 {
   margin-top: 47px;
+  margin-bottom: 27px;
   width: 151px;
   font-size: 21px;
   line-height: 21px;
@@ -214,7 +223,6 @@ img {
 }
 
 .features-item span {
-  margin-top: 25px;
   line-height: 21px;
 }
 
@@ -291,19 +299,19 @@ img {
 
 /* map */
 .map {
-  padding-top: 60px;
+  padding-top: 55px;
   text-align: center;
 }
 
 .appointment-title {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
   font-weight: 700;
   font-size: 30px;
 }
 
 .appointment-info {
-  margin-bottom: 48px;
+  margin-bottom: 45px;
   color: var(--basic-gray-dark);
   line-height: 24px;
 }
@@ -338,7 +346,7 @@ img {
 
 .form-inner {
   min-height: inherit;
-  padding: 61px 55px 55px;
+  padding: 54px 56px 55px;
 }
 
 .form-row {
@@ -382,7 +390,7 @@ img {
 }
 
 .form-label-childs {
-  margin-right: 40px;
+  margin-right: 27px;
 }
 
 .form-input {
@@ -392,7 +400,7 @@ img {
 
 .form-input-number {
   width: 38px;
-  padding-left: 14px;
+  padding-left: 15px;
 }
 
 .form-input-number,
@@ -453,10 +461,9 @@ img {
 }
 
 /* search */
-
 .search-filter {
   min-height: 217px;
-  padding: 26px 73px 31px;
+  padding: 26px 73px 18px 70px;
   background-image: url("../img/background-search.jpg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -465,7 +472,6 @@ img {
 
 .form-settings {
   display: flex;
-  /*justify-content: space-between;*/
 }
 
 .search-filter fieldset {
@@ -493,11 +499,10 @@ img {
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -39px;
+  left: -40px;
   top: 0;
   width: 27px;
   height: 23px;
-  /*border: 2px solid #000000;*/
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -517,13 +522,13 @@ img {
 
 .search-filter ul {
   padding: 0;
-  margin: 20px 0 0;
+  margin-top: 25px;
   list-style: none;
 }
 
 .filter-option {
-  margin-bottom: 20px;
-  padding-left: 39px;
+  margin-bottom: 25px;
+  padding-left: 40px;
 }
 
 .filter-option:last-child {
@@ -542,15 +547,16 @@ img {
 
 .filter-range fieldset {
   width: 317px;
+  margin: 0;
 }
 
 .range-wrapper {
-  margin: 10px 0 15px;
+  margin: 11px 0 25px;
 }
 
 .price-controls {
   height: 36px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -561,7 +567,6 @@ img {
 
 .price-controls:before {
   content: "";
-  display: block;
   width: 2px;
   height: 22px;
   position: absolute;
@@ -575,7 +580,14 @@ img {
 .price-controls .max-price {
   width: 50%;
   display: flex;
-  padding-left: 50px;
+}
+
+.price-controls .min-price {
+  padding-left: 63px;
+}
+
+.price-controls .max-price {
+  padding-left: 54px;
 }
 
 .price-controls label {
@@ -584,23 +596,22 @@ img {
 
 .price-controls input {
   width: 60%;
-  padding-left: 10px;
-  /*padding: 10px;*/
-  /*margin-left: 10px;*/
-  /*text-align: center;*/
+  padding-left: 5px;
   color: var(--basic-white);
   border: none;
-  /*border-radius: 5px;*/
   background-color: transparent;
   font-family: inherit;
   font-size: inherit;
+}
+
+.price-controls input[name="max-price"] {
+  padding-left: 4px;
 }
 
 .range-controls {
   position: relative;
   height: 20px;
   padding-top: 9px;
-
 }
 
 .range-controls .scale {
@@ -609,7 +620,7 @@ img {
 }
 
 .range-controls .bar {
-  width: 248px;
+  width: 255px;
   height: 2px;
   background: var(--basic-white);
 }
@@ -637,16 +648,17 @@ img {
 }
 
 .range-controls .toggle-max {
-  left: 248px;
+  left: 253px;
 }
 
 .filter-btn {
   display: flex;
   justify-content: center;
+  padding-right: 10px;
 }
 
 .filter-button {
-  padding: 10px 35px;
+  padding: 5px 34px;
   background-color: transparent;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
@@ -662,13 +674,14 @@ img {
 .search-result-sort {
   display: flex;
   align-items: center;
-  padding: 30px 0;
+  padding: 8px 0;
 }
 
 .find-total-text {
   font-size: 21px;
   font-weight: 700;
-  margin-right: 48px;
+  margin-left: 1px;
+  margin-right: 47px;
 }
 
 .find-sort-text,
@@ -678,6 +691,7 @@ img {
 }
 
 .find-sort-text {
+  margin-top: 7px;
   margin-right: 40px;
 }
 
@@ -705,23 +719,83 @@ img {
   color: var(--basic-black);
 }
 
+.sort-arrows {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sort-arrow {
+  margin-top: 5px;
+}
+
+.sort-arrow path {
+  fill: var(--basic-gray-lighter);
+}
+
+.sort-arrow:hover path {
+  fill: var(--basic-black);
+}
+
+.sort-arrow:focus path {
+  fill: var(--special-blue);
+}
+
+.sort-arrow-down {
+  margin-left: 12px;
+}
+
+.sort-arrow-active path {
+  fill: var(--special-blue);
+}
+
+/*result-content-list*/
 .result-content-list {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
 .result-content-item {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 31px;
+  padding-bottom: 31px;
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 30px;
 }
 
+.house span {
+  display: inline-block;
+}
+
+.house .house-type {
+  width: 90px;
+}
+
+.house .price {
+  margin-left: 20px;
+}
+
+.result-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .result-content-item h3 {
   font-size: 21px;
   font-weight: 700;
-  margin: 0;
+  margin: -5px 0 0;
+  cursor: pointer;
+}
+
+.result-content-item h3:hover {
+  color: var(--special-blue);
+}
+
+.result-content-item h3:active {
+  color: var(--basic-black-opacity);
 }
 
 .result-content-item p {
@@ -731,6 +805,7 @@ img {
 }
 
 .result-content-item .rating {
+  margin-right: 11px;
   line-height: 21px;
   color: var(--basic-gray);
 }
@@ -739,19 +814,33 @@ img {
   height: 90px;
 }
 
-.result-item-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.result-item-title {
+  margin-bottom: 5px;
+}
+
+.star {
+  display: inline-block;
+  background-image: url(../img/star.svg);
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 17px;
 }
 
 .result-content-buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 15px;
+}
+
+.button-result {
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .button-result-reservation {
+  margin-left: 2px;
+  padding: 5px 18px;
   background-color: var(--special-brown);
 }
 
@@ -765,6 +854,7 @@ img {
 }
 
 .button-result-details {
+  padding: 5px 17px;
   background-color: var(--special-blue);
 }
 
@@ -779,7 +869,7 @@ img {
 
 /* main-footer */
 .footer-contacts-list {
-  padding: 0 73px;
+  padding: 0 55px;
   display: flex;
 }
 
@@ -793,6 +883,7 @@ img {
 }
 
 .footer-phone-text {
+  margin-top: 23px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -805,7 +896,7 @@ img {
 }
 
 .footer-social {
-  padding-top: 37px;
+  padding-top: 36px;
   padding-bottom: 37px;
   display: flex;
   justify-content: center;
@@ -862,6 +953,7 @@ img {
 }
 
 .footer-copyright-text {
+  margin-top: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -899,6 +991,3 @@ img {
   color: var(--basic-white-opacity);
 }
 
-.modal-find {
-  display: none;
-}
